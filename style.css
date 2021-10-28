@@ -1,0 +1,559 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+    margin: 0px;
+    padding: 0px;
+}
+.inheader{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.inheader img{
+    height: 20px;
+    width: 30px;
+    margin: 0px;
+    padding: 50px;
+    left: 100px;
+    float: left;
+}
+.lgcontainer{
+    height: 100%;
+    display: table;
+    float: left;
+}
+.lgcontainer h1{
+    color: white;
+    height: 100% ;
+    display: table-cell  ;
+    vertical-align: middle;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: 200;
+}
+.lgcontainer h1 span{
+    font-weight: 800;
+}
+.nav{
+    float: right;
+    height: 100%;
+}
+.nav a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+.nav a:last-child{
+    padding-right: 0;
+}
+.nav a li{
+display: table-cell;
+vertical-align: middle;
+color: white;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 20px;
+}
+.banner-area{
+    width :100%;
+    height: 640px;
+    position: relative;
+    margin: 0px;
+    top: 0px;
+    background-image: url(https://i.pinimg.com/originals/8a/a4/3e/8aa43e884c4205e63c929e9661bb0b9c.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.app-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #000; 
+}
+.app-wrapper {
+    position: absolute;
+    min-width: 450px;
+    min-height: 550px;
+    padding : 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 0px 40px #000;
+    margin-bottom: 10px;
+    right: 550px;
+    top: 50px;
+}
+.app-wrapper input{
+    position: absolute;
+    height: 5px;
+    width: 55.5%;
+    margin: 50px;
+    top: 25px;
+    left: -7px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 20px;
+    padding-right: 60px;
+    font-size: 17px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.addBttn{
+    position: absolute;
+  width: 30px;
+  padding: 10px;
+  right: 60px;
+  top: 75px;
+  height: 27px;
+  border-radius: 3px;
+  background: #d9d9d9;
+  color: #000;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+.addBttn:hover{
+  background: #bbb;
+  color: #FFF;
+}
+.todolist{
+    position: absolute;
+    height: 70%;
+    width: 83%;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 5px;
+  
+}
+.todolist::-webkit-scrollbar{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.todolist li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px ;
+    position: relative;
+    background: transparent;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    transition: 0.2s;
+    background: #eee;
+}
+.todolist li:nth-child(odd){
+    background: #ccc;
+
+}
+.todolist li:hover{
+    background: #6D9886;
+}
+.todolist li :checked{
+    background: #11324D;
+    color: #fff;
+    text-decoration: line-through;
+}
+.todolist li.checked::before{
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+
+}
+.first{
+    position: absolute;
+    right: 70px;
+    color: #000;
+    width: 5px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+.second{
+  position: absolute;
+  right: 1px;
+  color: #000;
+  width: 45px;
+  text-align: center;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+
+}
+h1{
+    margin: 30px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align:justify;
+    padding: 0px 40px 40px 40px;
+    font-size: 25px;  
+} */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+    margin: 0px;
+    padding: 0px;
+}
+.inheader{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.inheader img{
+    height: 20px;
+    width: 30px;
+    margin: 0px;
+    padding: 50px;
+    left: 100px;
+    float: left;
+}
+.lgcontainer{
+    height: 100%;
+    display: table;
+    float: left;
+}
+.lgcontainer h1{
+    color: white;
+    height: 100% ;
+    display: table-cell  ;
+    vertical-align: middle;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: 200;
+}
+.lgcontainer h1 span{
+    font-weight: 800;
+}
+.nav{
+    float: right;
+    height: 100%;
+}
+.nav a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+.nav a:last-child{
+    padding-right: 0;
+}
+.nav a li{
+display: table-cell;
+vertical-align: middle;
+color: white;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 20px;
+}
+.banner-area{
+width :100%;
+height: 640px;
+position: relative;
+margin: 0px;
+top: 0px;
+background-image: url(https://i.pinimg.com/originals/8a/a4/3e/8aa43e884c4205e63c929e9661bb0b9c.jpg);
+background-size: cover;
+background-position: center center;
+}
+h1{
+    margin: 30px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align:justify;
+    padding: 0px 40px 40px 40px;
+    font-size: 25px;  
+}
+h2{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: justify;padding-left: 45px;
+    padding-bottom: 0px;
+    font-size: 25px;margin-bottom: 0px;
+    text-align: center;
+
+}
+.copy-right{
+    text-align: center;
+    font-size: 15px;
+}
+.app-wrapper {
+    position: absolute;
+    min-width: 450px;
+    min-height: 550px;
+    padding : 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 0px 40px #000;
+    margin-bottom: 10px;
+}
+.app-header{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: #000; 
+  }
+
+.app-wrapper input{
+      position: absolute;
+      height: 5px;
+      width: 55.5%;
+      margin: 50px;
+      top: 25px;
+      left: -7px;
+      outline: none;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 20px;
+      padding-right: 60px;
+      font-size: 17px;
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .addBttn{
+      position: absolute;
+    width: 30px;
+    padding: 10px;
+    right: 60px;
+    top: 75px;
+    height: 27px;
+    border-radius: 3px;
+    background: #d9d9d9;
+    color: #000;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.addBttn:hover{
+    background: #bbb;
+    color: #FFF;
+}  
+.todolist{
+    position: absolute;
+    height: 60%;
+    width: 29%;
+    margin: auto;
+    right: 0;
+    left: -10px;
+    top: 30%;
+    /* bottom: 15px; */
+    overflow: auto;
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
+    border-radius: 5px;
+  
+}
+.todolist::-webkit-scrollbar{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.todolist li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px ;
+    position: relative;
+    background: transparent;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    transition: 0.2s;
+    background: #eee;
+    border: 1px solid#ccc;
+    outline: none;
+}
+.todolist li:nth-child(odd){
+    background: #fff;
+
+}
+.todolist li:hover{
+    background: #6D9886;
+}
+.todolist li :checked{
+    background: #11324D;
+    color: #fff;
+    text-decoration: line-through;
+}
+.todolist li.checked::before{
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    align-items: flex-end;
+    top: 0;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    bottom: 0px;
+    color: black;
+    background:transparent;
+    border-radius: 3px;
+    transition: all 0.3 ease;
+    
+  }
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+    width: 50px;
+    right: 0px;
+  }
+  /* button{
+      font-size: 30px;
+      float: right; 
+      right: 0px;
+      top: -20px;
+  }
+  .fa-trash{
+      font-size: 20px;
+      width: 40px;
+      padding: 0px;
+      right: 0px;
+      bottom: 0px;
+  } */
+/* .first{
+    position: absolute;
+    right: 70px;
+    color: #000;
+    width: 5px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+.second{
+  position: absolute;
+  right: 1px;
+  color: #000;
+  width: 45px;
+  text-align: center;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+
+} */
+
+  /* li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  } */
+
+  /* .todo button{
+    right: 10px;
+    top: -100px;
+    float: right;
+    /* background: white; */
+    /* color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5 ease;
+    bottom: 0px;
+    height: 40px;
+    width: 40px;
+    
+    
+} */
+  /* .trash-btn{
+      /* background: #11324D; */
+      /* color: white;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+      align-items: center;
+      padding: 0px 2px 2px 10px;
+  } */
+   
+  /* .todo-item{
+      padding: 0rem 0.5rem;
+  }
+  .fa-trash,
+  .fa-check{
+       pointer-events: none;
+  }
+  .completed{
+      text-decoration: line-through;
+      opacity: 0.5;
+  } */ 
